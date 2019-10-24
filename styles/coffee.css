@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+table{
+   border-collapse: collapse;
+}
+.price td{
+    width: 80px;text-align: center;
+}
+.price2 td::before{
+ content: "$";
+}
+.header{
+ width:100%;background-color:#8c8c8c;color:cornsilk;font-size: 30px;text-align: center; vertical-align: middle;height:80px;line-height: 70px;
+}
+.footer{
+ width:100%;background-color:#8c8c8c;color:cornsilk;font-size: 30px;text-align: center;
+}
+.content{
+ width: 100%;
+}
+.left{
+ width:20%;background-color:#d9d9d9;vertical-align: top;
+}
+.left ul{
+    position:fixed;
+}
+.left ul li{list-style-type:none;border-bottom: 1px solid #555;
+}
+.left ul li:last-child{
+    border-bottom: none;
+}
+.right{
+ width:80%;padding-left: 10px;padding-top: 10px;padding-bottom: 10px;
+}
+.right table{
+ margin: 0 auto;
+}
+.phtotone{
+ display: block;margin: 0 auto;
+}
+.phtottwo{
+ width:100px; height:100px;
+}
+li a {
+    display: block;
+    color: #000;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #555;
+    color: white;
+}
+li a:active{
+    background-color:#85a5ff;
+    color:#ad4e00;
+}
+p::first-letter {
+    font-size: 32px;
+}
+p {
+     text-indent: 2em;
+}
