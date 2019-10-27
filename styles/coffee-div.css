@@ -9,7 +9,7 @@ table{
     width: 80px;
     text-align: center;
 }
-.price2 td::before{
+.price2 td::after{
     content: "$";
 }
 .header{
