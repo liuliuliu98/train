@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>动漫之家</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="https://cdn.bootcss.com/axios/0.19.0/axios.min.js"></script>
+
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .header {
+    width: 100%;
+    height: 80px;
+    background-color: #fff0f6;
+    color: #ff85c0;
+    line-height: 80px;
+    font-size: 18px;
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .header img {
+    vertical-align: middle;
+    padding: 0 10px;
+    height: 40px;
+    width: 60px;
+  }
+
+  .title {
+    position: relative;
+    margin: 0 auto;
+    width: 1200px;
+  }
+
+  .nav {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    list-style: none;
+  }
+
+  .nav li {
+    float: left;
+    padding-left: 10px;
+    line-height: 40px;
+  }
+
+  .nav li a {
+    text-decoration: none;
+    color: #ff85c0;
+  }
+
+  .nav li a:hover {
+    color: #520339;
+  }
+
+  .content h2 {
+    text-align: center;
+  }
+
+  .imgg {
+    display: block;
+    text-align: center;
+    margin: 30px;
+  }
+
+  .content p {
+    text-align: center;
+  }
+
+  .footer {
+    background-color: #fff0f6;
+    margin: 0 auto;
+    width: 1200px;
+  }
+
+  .contact {
+    padding-top: 40px;
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .c {
+    flex: 1;
+    text-align: center;
+  }
+
+  .c img {
+    margin-bottom: 15px;
+    height: 100px;
+    width: 100px;
+  }
+
+  .s {
+    padding-top: 20px;
+  }
+
+  .l img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .ban {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    border-top: 1px solid rgb(189, 187, 187);
+    padding: 50px;
+  }
+</style>
+
+<body>
+
+  <div class="header">
+    <div class="title">
+      <img src="images/qiatongxingxiang.png" alt="">
+      <span>动漫之家</span>
+      <ul class="nav">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="news.html">新闻</a></li>
+        <li><a href="about.html">关于我们</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="content w">
+    <h2></h2>
+    <div class="imgg"></div>
+    <p></p>
+  </div>
+
+  <div class="footer">
+    <div class="contact">
+      <div class="c s">
+        <img src="images/dingwei.png" alt="">
+        <p>闽江学院</p>
+      </div>
+      <div class="c s">
+        <img src="images/youjian.png" alt="">
+        <p>810547314@qq.com</p>
+      </div>
+      <div class="c s">
+        <img src="images/tel.png" alt="">
+        <p>13295911400</p>
+      </div>
+      <div class="c l">
+        <img src="https://wwwstatic.vivo.com.cn/vivoportal/web/dist/common_umix/images/vivo-follow-ali_6f99f2c.jpg"
+          alt="">
+        <p>扫一扫，加入动漫之家</p>
+      </div>
+    </div>
+    <p class="ban">
+      版权所有@动漫之家
+    </p>
+  </div>
+
+  <script>
+    $(function () {
+      var id = parseInt(location.search.split('=')[1]);
+      console.log(id);
+      axios.get('https://lingqule.papamk.com/wp-json/w2w/v1/products/' + id)
+        .then(function (res) {
+          var a = res.data;
+          $('.content h2').html(a.name);
+          $('.content .imgg').html(a.description_html);
+          $('.content p').html(a.date_created);
+        }).catch(function (res) {
+          console.log('error', res);
+        })
+    })
+  </script>
+
+</body>
+
+</html>

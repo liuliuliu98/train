@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>动漫之家</title>
+  
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  h2 {
+    margin: 30px;
+  }
+
+  .header {
+    width: 100%;
+    height: 80px;
+    background-color: #fff0f6;
+    color: #ff85c0;
+    line-height: 80px;
+    font-size: 18px;
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .header img {
+    vertical-align: middle;
+    padding: 0 10px;
+    height: 40px;
+    width: 60px;
+  }
+
+  .title {
+    position: relative;
+    margin: 0 auto;
+    width: 1200px;
+  }
+
+  .nav {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    list-style: none;
+  }
+
+  .nav li {
+    float: left;
+    padding-left: 10px;
+    line-height: 40px;
+  }
+
+  .nav li a {
+    text-decoration: none;
+    color: #ff85c0;
+  }
+
+  .nav li a:hover {
+    color: #520339;
+  }
+
+  .banner {
+    height: 600px;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 1200px;
+  }
+
+  .banner img {
+    width: 100%;
+    height: 600px !important;
+  }
+
+  .fuwu {
+    text-align: center;
+    margin: 0 auto;
+    width: 1200px;
+  }
+
+  .fuwu-content {
+    background-color: #efdbff;
+    height: 300px;
+    font-size: 30px;
+  }
+
+  .fuwu-content ul {
+    display: flex;
+    height: 300px;
+    align-items: center;
+    list-style: none;
+  }
+
+  .fuwu-content li {
+    flex: 1;
+  }
+  .fuwu img {
+    height: 80px;
+    width: 80px;
+  }
+  .popular {
+    text-align: center;
+    margin: 0 auto;
+    width: 1200px;
+  }
+
+  .pic {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+    padding: 40px;
+  }
+
+  .pic img {
+    width: 50%;
+    display: block;
+    float: left;
+    height: 450px;
+  }
+
+  .pic .txt {
+    width: 49%;
+    height: 450px;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .txt p {
+    text-align: left;
+    padding: 20px;
+    font-size: 20px;
+    text-indent: 2em;
+  }
+
+  .txt p:nth-child(2) {
+    border-bottom: 1px solid #ccc;
+  }
+
+  .pic2 img {
+    float: right;
+  }
+
+  .choice {
+    text-align: center;
+    margin: 0 auto;
+    width: 1200px;
+  }
+
+  .choice ul {
+    width: 100%;
+    display: flex;
+    list-style: none;
+  }
+
+  .choice ul li {
+    flex: 1;
+    margin-right: 10px;
+  }
+
+  .choice ul li img {
+    padding: 10px 20px;
+    width: 250px;
+  }
+
+  .footer {
+    background-color: #fff0f6;
+    margin: 0 auto;
+    width: 1200px;
+  }
+
+  .contact {
+    padding-top: 40px;
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .c {
+    flex: 1;
+    text-align: center;
+  }
+
+  .c img {
+    margin-bottom: 15px;
+    height: 100px;
+    width: 100px;
+  }
+
+  .s {
+    padding-top: 20px;
+  }
+
+  .l img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .ban {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    border-top: 1px solid rgb(189, 187, 187);
+    padding: 50px;
+  }
+</style>
+
+<body>
+
+  <div class="header">
+    <div class="title">
+      <img src="images/qiatongxingxiang.png" alt="">
+      <span>动漫之家</span>
+      <ul class="nav">
+        <li><a href="danmu.html">弹幕</a></li>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="news.html">新闻</a></li>
+        <li><a href="about.html">关于我们</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="banner">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="https://i0.hdslb.com/bfs/bangumi/image/f6b63c1c9614a86f9d8fa30a3d77da382ac1bc88.jpg@2320w_664h.jpg"
+            alt="...">
+          <div class="carousel-caption">
+            ...
+          </div>
+        </div>
+        <div class="item">
+          <img src="https://i0.hdslb.com/bfs/bangumi/image/0227b5566fead4f49ab50113b0a7c6fe6d529f75.jpg@2320w_664h.jpg"
+            alt="...">
+          <div class="carousel-caption">
+            ...
+          </div>
+        </div>
+        <div class="item">
+          <img src="https://i0.hdslb.com/bfs/bangumi/image/f9ad865474534486e3caeffbfab8b85e3a3740ef.png@2320w_664h.png"
+            alt="...">
+          <div class="carousel-caption">
+            ...
+          </div>
+        </div>
+        ...
+      </div>
+
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="fuwu">
+    <h2>服务范围</h2>
+    <div class="fuwu-content">
+      <ul>
+        <li><img src="images/sousuo.png"
+            alt="">
+          <p>番剧索引</p>
+        </li>
+        <li><img src="images/huati.png"
+            alt="">
+          <p>话题精选</p>
+        </li>
+        <li><img src="images/zixun.png"
+            alt="">
+          <p>官方资讯</p>
+        </li>
+        <li><img src="images/guanfang.png"
+            alt="">
+          <p>官方延伸</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="popular">
+    <h2>热门动漫</h2>
+    <div class="pic">
+
+      <div class="txt">
+        <h3>鬼灭之刃</h3>
+        <p>
+          简介：大正时期，日本。心地善良的卖炭少年·炭治郎，有一天他的家人被鬼杀死了。而唯一幸存下来的妹妹——祢豆子变成了鬼。被绝望的现实打垮的炭治郎，为了寻找让妹妹变回人类的方法，决心朝着“鬼杀队”的道路前进。人与鬼交织的悲哀的兄妹的故事，现在开始
+        </p>
+        <p>原作：吾峠呼世晴（集英社《周刊少年JUMP》连载） 监督：外崎春雄 角色设计：松岛晃 副角色设计：佐藤美幸、梶山庸子、菊池美花 脚本制作：ufotable 概念美术：卫藤功二、矢中胜、竹内香纯、桦泽侑里
+          摄影监督：寺尾优一 3D监督：西胁一树 色彩设计：大前祐子 剪辑：神野学 音乐：梶浦由记、椎名豪 制作人：近藤光 动画制作：ufotable</p>
+      </div>
+      <img src="https://i0.hdslb.com/bfs/bangumi/9d9cd5a6a48428fe2e4b6ed17025707696eab47b.png@450w_600h.webp" alt="">
+    </div>
+    <div class="pic pic2">
+      <div class="txt">
+        <h3>工作细胞</h3>
+        <p>
+          简介：这是一个关于你自身的故事。你体内的故事——。人的细胞数量，约为37兆2千亿个。细胞们在名为身体的世界中，今天也精神满满、无休无眠地在工作着。运送着氧气的红细胞，与细菌战斗的白细胞……！这里，有着细胞们不为人知的故事。
+        </p>
+        <p>原作：清水茜（讲谈社《月刊少年天狼星》连载） 监督：铃木健一 系列构成：柿原优子 剧本：柿原优子、铃木健一 角色设计：吉田隆彦 总作画监督：吉田隆彦、玉置敬子 美术监督：Atelier Platz
+          美术设定：曾野由大、桥口浩二 制作人：高桥祐马 动画制作人：若松刚 动画制作：david production 制作：ANIPLEX、讲谈社、david production</p>
+      </div>
+      <img src="https://i0.hdslb.com/bfs/bangumi/f5d5f51b941c01f8b90b361b412dc75ecc2608d3.png@450w_600h.webp" alt="">
+    </div>
+    <div class="pic">
+      <div class="txt">
+        <h3>紫罗兰永恒花园</h3>
+        <p>
+          简介：某个大陆的、某个时代。大陆南北分割的战争结束了，世界走向了和平。在战争中作为军人的薇尔莉特•伊芙加登，怀抱着对她来说无比重要之人留下的“话语”，离开军队来到了大港口城市。薇尔莉特在街道上找到了“代写书信”的工作。她直面委托人、触碰着他们内心深处的坦率感情。与此同时，薇尔莉特在记录书信时，渐渐明白那“话语”的含义。
+        </p>
+        <p>原作：暁佳奈(KAエスマ文庫) 监督：石立太一 总作画监督：高瀬亜貴子 美术监督：渡邊美希子 色彩设计：米田侑加 音响制作：楽音舎 音乐：Evan Call
+          音乐制作：ランティス（Lantis）、ミラクル・バス（Miracle Bus） 动画制作：京都アニメーション（京都动画） 制作协力：アニメーションDo（Animation Do）</p>
+      </div>
+      <img src="https://i0.hdslb.com/bfs/bangumi/b6e3986355efc081b7f4aaf9f576c9ce8116e193.jpg@450w_600h.webp" alt="">
+    </div>
+  </div>
+
+  <div class="choice">
+    <h2>编辑精选</h2>
+    <ul>
+      <li>
+        <img src="https://i1.hdslb.com/bfs/archive/f060ee5975ab041fd7d8ef959be0425b11e93bb7.jpg@320w_200h.webp" alt="">
+        <h4>【10月】命运-冠位指定绝对<br>魔兽战线巴比伦尼亚</h4>
+      </li>
+      <li>
+        <img src="https://i2.hdslb.com/bfs/archive/cb13f125d4d6c24befc22c096c2f903c0db52836.jpg@320w_200h.webp" alt="">
+        <h4>【10月】动物狂想曲 / BEASTARS</h4>
+      </li>
+      <li>
+        <img src="https://i1.hdslb.com/bfs/archive/6a928c65d6c0ab05858e3b3bcea96fe9a346b9f0.jpg@320w_200h.webp" alt="">
+        <h4>【10月】我的英雄学院 第四季</h4>
+      </li>
+      <li>
+        <img src="https://i2.hdslb.com/bfs/archive/f81a3be891adf8e84b997f963a20d18fe60bbb9d.jpg@320w_200h.webp" alt="">
+        <h4>【10月】我，不是说了<br>能力要平均值么！</h4>
+      </li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <div class="contact">
+      <div class="c s">
+        <img src="images/dingwei.png" alt="">
+        <p>闽江学院</p>
+      </div>
+      <div class="c s">
+        <img src="images/youjian.png" alt="">
+        <p>810547314@qq.com</p>
+      </div>
+      <div class="c s">
+        <img src="images/tel.png" alt="">
+        <p>13295911400</p>
+      </div>
+      <div class="c l">
+        <img src="https://wwwstatic.vivo.com.cn/vivoportal/web/dist/common_umix/images/vivo-follow-ali_6f99f2c.jpg"
+          alt="">
+        <p>扫一扫，加入动漫之家</p>
+      </div>
+    </div>
+    <p class="ban">
+      版权所有@动漫之家
+    </p>
+  </div>
+
+</body>
+
+</html>
